@@ -1,0 +1,56 @@
+@import '../../styles/colors';
+@import '../../styles/_mixins.scss';
+@import '../../styles/reset';
+
+.section {
+  background-color: $black;
+  font-family: 'DM Sans', 'Times New Roman', Times, serif;
+  color: $light;
+  padding-top: 182px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  position: relative;
+
+  .title {
+    @extend %m-reset;
+    @include font(60px, 700, 84px);
+
+    .name {
+      color: $blue;
+    }
+  }
+
+  .subtitle {
+    @extend %m-reset;
+    @include font(40px, 700, 56px);
+  }
+
+  .description {
+    @include font(18px, 500, 24px);
+    @extend %m-reset;
+    margin-top: 20px;
+  }
+
+  .square {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: calc(50% - 270px);
+    left: calc(50% - 250px);
+    border: 1px solid;
+    border-image-source: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0) 90%
+    );
+    border-image-slice: 1;
+
+    @for $i from 1 through 5 {
+      &:nth-of-type(#{$i}) {
+        transform: rotate(-15deg * $i);
+      }
+    }
+  }
+}
