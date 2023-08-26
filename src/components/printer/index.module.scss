@@ -1,0 +1,10 @@
+@import '../../styles/reset';
+@import '../../styles/colors';
+@import '../../styles/animations.scss';
+
+.text {
+  @extend %m-reset;
+  padding-right: 5px;
+  border-right: 4px solid $light;
+  animation: print 1.5s linear 0s infinite;
+}
