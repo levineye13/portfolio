@@ -1,0 +1,12 @@
+@import './colors';
+
+@keyframes print {
+  0%,
+  100% {
+    border-right-color: $light;
+  }
+
+  50% {
+    border-right-color: transparent;
+  }
+}
