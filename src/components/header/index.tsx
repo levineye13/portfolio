@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import React, { FC, ReactElement } from 'react';
 import { NavLink } from 'react-router-dom';
 
 import { APP_ROUTES } from '../../utils/constants';
@@ -12,7 +12,7 @@ const checkActiveLink = (
   activeStyle: string
 ): string => (isActive ? `${style} ${activeStyle}` : style);
 
-const Header = (): ReactElement => {
+const Header: FC = (): ReactElement => {
   return (
     <header className={styles.header}>
       <p className={styles.description}>Portfolio</p>

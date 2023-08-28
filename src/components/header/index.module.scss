@@ -10,7 +10,6 @@
   flex-direction: row;
   justify-content: space-between;
   color: $light;
-  flex-grow: 0;
 
   .description {
     @extend %m-reset;
