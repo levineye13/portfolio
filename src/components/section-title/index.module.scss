@@ -5,5 +5,6 @@
 .title {
   @include font(60px, 700, 78px);
   @extend %m-reset;
+  font-family: 'DM Sans', 'Times New Roman', Times, serif;
   color: $blue;
 }
