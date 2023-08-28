@@ -4,7 +4,7 @@ import styles from './index.module.scss';
 
 interface ISectionTitle {
   readonly children: string;
-  readonly className: string;
+  readonly className?: string;
 }
 
 const SectionTitle: FC<ISectionTitle> = ({
