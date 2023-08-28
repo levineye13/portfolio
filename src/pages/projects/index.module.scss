@@ -1,0 +1,13 @@
+@import '../../styles/colors';
+
+.section {
+  background-color: $light;
+  padding: 70px 115px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .title {
+    margin-bottom: 60px;
+  }
+}
