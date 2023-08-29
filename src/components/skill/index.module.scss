@@ -1,0 +1,24 @@
+@import '../../styles/reset';
+@import '../../styles/mixins';
+@import '../../styles/colors';
+
+.figure {
+  @extend %m-reset;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid $bordes;
+  padding: 5px;
+  border-radius: 5px;
+
+  .img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .name {
+    @include font(18px, 500, 27px);
+    font-family: 'DM Sans', 'Times New Roman', Times, serif;
+    margin-left: 3px;
+  }
+}
