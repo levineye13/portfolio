@@ -42,7 +42,9 @@ const Footer: FC = (): ReactElement => {
           </li>
         </ul>
       </address>
-      <p className={styles.author}> &copy; 2022. Oleg Zharov</p>
+      <p className={styles.author}>
+        &copy; {new Date().getFullYear()}. Oleg Zharov
+      </p>
     </footer>
   );
 };
