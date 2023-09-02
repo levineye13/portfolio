@@ -2,7 +2,7 @@ import React, { FC, ReactElement } from 'react';
 
 import Title from '../../components/section-title';
 import Skill from '../../components/skill';
-import { skills } from '../../data/skills';
+import { skills } from '../../core/data/skills';
 import styles from './index.module.scss';
 
 const Skills: FC = (): ReactElement => {

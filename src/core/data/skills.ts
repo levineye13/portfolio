@@ -1,4 +1,4 @@
-import { images } from '../images';
+import { images } from '../../images';
 
 type Skills = {
   [key in 'frontend' | 'backend']: Array<{ name: string; img: string }>;

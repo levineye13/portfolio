@@ -1,7 +1,7 @@
 import React, { FC, ReactElement } from 'react';
 import { NavLink } from 'react-router-dom';
 
-import { APP_ROUTES } from '../../utils/constants';
+import { APP_ROUTES } from '../../core/constants';
 import styles from './index.module.scss';
 
 const { projects, skills, contacts } = APP_ROUTES;
