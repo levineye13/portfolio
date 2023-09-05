@@ -5,15 +5,21 @@ import styles from './index.module.scss';
 interface IProject {
   readonly src: string;
   readonly title: string;
+  readonly link: string;
 }
 
-const Project: FC<IProject> = ({ src, title }): ReactElement => {
+const Project: FC<IProject> = ({ src, title, link }): ReactElement => {
   return (
     <article className={styles.article}>
       <figure className={styles.figure}>
-        <div className={styles.container}>
+        <a
+          className={styles.link}
+          href={link}
+          target="_blank"
+          rel="noreferrer noopener"
+        >
           <img src={src} alt={title} className={styles.img} />
-        </div>
+        </a>
         <figcaption className={styles.title}>{title}</figcaption>
       </figure>
     </article>
