@@ -1,4 +1,7 @@
-.div {
+@import '../../styles/reset';
+
+.list {
+  @extend %list-reset;
   max-width: 1170px;
   width: 100%;
   display: flex;
@@ -6,4 +9,8 @@
   flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
+
+  .item {
+    flex-basis: 370px;
+  }
 }
