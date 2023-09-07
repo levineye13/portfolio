@@ -7,8 +7,12 @@
   background-color: $black;
   font-family: 'DM Sans', 'Times New Roman', Times, serif;
   color: $light;
-  padding-top: 13%;
-  padding-bottom: 24%;
+  padding: {
+    left: 15px;
+    right: 15px;
+    top: 13%;
+    bottom: 24%;
+  }
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,29 +21,63 @@
   .title {
     @extend %m-reset;
     @include font(60px, 700, 84px);
+    text-align: center;
 
     .name {
       color: $blue;
+    }
+
+    @media screen and (max-width: 1024px) {
+      font-size: 45px;
+    }
+
+    @media screen and (max-width: 720px) {
+      font-size: 35px;
+    }
+
+    @media screen and (max-width: 480px) {
+      font-size: 28px;
     }
   }
 
   .subtitle {
     @extend %m-reset;
     @include font(40px, 700, 56px);
+
+    @media screen and (max-width: 1024px) {
+      font-size: 30px;
+    }
+
+    @media screen and (max-width: 720px) {
+      font-size: 24px;
+    }
+
+    @media screen and (max-width: 480px) {
+      font-size: 18px;
+    }
   }
 
   .description {
     @include font(18px, 500, 24px);
     @extend %m-reset;
     margin-top: 20px;
+
+    @media screen and (max-width: 1024px) {
+      font-size: 16px;
+    }
+
+    @media screen and (max-width: 480px) {
+      font-size: 14px;
+    }
   }
 
   .square {
-    width: 500px;
-    height: 500px;
+    aspect-ratio: 1 / 1;
+    max-width: 500px;
+    width: 36%;
     position: absolute;
-    top: calc(50% - 270px);
-    left: calc(50% - 250px);
+    top: 50%;
+    left: 50%;
     border: 1px solid;
     border-image-source: linear-gradient(
       180deg,
@@ -50,7 +88,7 @@
 
     @for $i from 1 through 5 {
       &:nth-of-type(#{$i}) {
-        transform: rotate(-15deg * $i);
+        transform: translate(-50%, -50%) rotate(-15deg * $i);
       }
     }
   }
