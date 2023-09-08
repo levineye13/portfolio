@@ -1,0 +1,66 @@
+@import '../../styles/colors';
+
+.button {
+  padding: 0;
+  border: 0;
+  outline: 0;
+  width: 40px;
+  height: 40px;
+  background-color: $blue;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  .span {
+    position: relative;
+
+    &,
+    &::before,
+    &::after {
+      display: block;
+      width: 30px;
+      height: 4px;
+      background-color: rgba($color: $black, $alpha: 0.7);
+      border-radius: 3px;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      transition: transform 0.3s ease;
+    }
+
+    &::before {
+      top: -8px;
+    }
+
+    &::after {
+      bottom: -8px;
+    }
+  }
+
+  &_active {
+    .span {
+      visibility: hidden;
+
+      &::before {
+        visibility: visible;
+        transform: translateY(8px) rotate(-45deg);
+      }
+
+      &::after {
+        visibility: visible;
+        transform: translateY(-8px) rotate(45deg);
+      }
+    }
+  }
+}
