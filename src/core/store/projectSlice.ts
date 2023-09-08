@@ -3,11 +3,11 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { getRepos } from '../githubApi';
 import { gitRepos } from '../data/repos';
 
-interface ProjectsState {
+interface IProjectsState {
   projects: Array<{ id: number; name: string; html_url: string }>;
 }
 
-const initialState: ProjectsState = {
+const initialState: IProjectsState = {
   projects: [],
 };
 
