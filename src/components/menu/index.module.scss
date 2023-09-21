@@ -1,0 +1,101 @@
+@import '../../styles/mixins';
+@import '../../styles/colors';
+@import '../../styles/reset';
+
+.menu {
+  box-sizing: border-box;
+  font-family: 'DM Sans', 'Times New Roman', Times, serif;
+  position: static;
+  overflow: hidden;
+  transition: width 0.3s ease;
+  z-index: 2;
+
+  &_active {
+    @media screen and (max-width: 720px) {
+      display: block;
+    }
+  }
+
+  .background {
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    right: 0;
+    z-index: 0;
+    background: radial-gradient(
+      circle,
+      rgba($color: $blue, $alpha: 0.9),
+      rgba($color: $blue, $alpha: 0.5)
+    );
+    border-radius: 50%;
+    transform: translate(40%, -30%);
+    transition: width 0.3s ease, height 0.3s ease;
+  }
+
+  .list {
+    @extend %list-reset;
+    display: flex;
+    flex-direction: row;
+
+    @media screen and (max-width: 720px) {
+      width: 0;
+      display: none;
+      position: absolute;
+      top: 100%;
+      right: 0;
+    }
+
+    @media screen and (max-width: 720px) {
+      flex-direction: column;
+      align-items: flex-end;
+      padding-right: 20px;
+    }
+  }
+
+  &_active {
+    .list {
+      display: flex;
+    }
+
+    .background {
+      width: 70vw;
+      height: 80vh;
+
+      @media screen and (min-width: 721px) {
+        width: 0;
+        height: 0;
+      }
+    }
+  }
+
+  .item:not(:first-of-type) {
+    margin-left: 40px;
+
+    @media screen and (max-width: 720px) {
+      margin: {
+        left: 0;
+        top: 20px;
+      }
+    }
+  }
+
+  .link {
+    @include font(16px, 500, 24px);
+    color: inherit;
+    text-decoration: none;
+    transition: opacity ease 0.3s;
+
+    &_active {
+      border-bottom: 3px solid $blue;
+
+      @media screen and (max-width: 720px) {
+        border-bottom-color: $light;
+      }
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
