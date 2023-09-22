@@ -13,7 +13,7 @@ $social-colors: (
   background-color: $black;
   font-family: 'DM Sans', 'Times New Roman', Times, serif;
   color: $light;
-  padding: 60px 0 50px;
+  padding: 60px 20px 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,8 +25,10 @@ $social-colors: (
   .list {
     @extend %list-reset;
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
+    justify-content: space-around;
     align-items: center;
+    gap: 15px;
 
     .img > path {
       transition: fill 0.3s ease;
@@ -36,10 +38,6 @@ $social-colors: (
       .img.#{$social}:hover > path {
         fill: $color;
       }
-    }
-
-    .item:not(:first-of-type) {
-      margin-left: 30px;
     }
   }
 
