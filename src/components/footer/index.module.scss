@@ -18,6 +18,14 @@ $social-colors: (
   flex-direction: column;
   align-items: center;
 
+  @media screen and (max-width: 720px) {
+    padding: 30px 20px;
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 20px;
+  }
+
   .address {
     margin-bottom: 27px;
   }
