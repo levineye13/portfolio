@@ -11,18 +11,12 @@
   justify-content: space-between;
   align-items: center;
   color: $light;
+  position: relative;
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 720px) {
     padding: {
-      left: 60px;
-      right: 60px;
-    }
-  }
-
-  @media screen and (max-width: 480px) {
-    padding: {
-      left: 15px;
-      right: 15px;
+      left: 20px;
+      right: 20px;
     }
   }
 
