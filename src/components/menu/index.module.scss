@@ -16,7 +16,7 @@
     }
   }
 
-  .background {
+  .radial {
     position: absolute;
     width: 0;
     height: 0;
@@ -31,6 +31,7 @@
     border-radius: 50%;
     transform: translate(40%, -30%);
     transition: width 0.3s ease, height 0.3s ease;
+    cursor: pointer;
   }
 
   .list {
@@ -58,7 +59,7 @@
       display: flex;
     }
 
-    .background {
+    .radial {
       width: 70vw;
       height: 80vh;
 

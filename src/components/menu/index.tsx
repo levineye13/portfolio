@@ -1,9 +1,10 @@
-import React, { FC, ReactElement } from 'react';
+import React, { FC, MouseEvent, ReactElement } from 'react';
 import { NavLink } from 'react-router-dom';
 
 import styles from './index.module.scss';
 import { APP_ROUTES } from '../../core/constants';
 import { useAppSelector } from '../../core/store/hooks';
+import Background from '../../components/background';
 import BurgerButton from '../burger-button';
 
 const { projects, skills, contacts } = APP_ROUTES;
@@ -17,9 +18,17 @@ const checkActiveLink = (
 const Menu: FC = (): ReactElement => {
   const { active } = useAppSelector((state) => state.menu);
 
+  const handleRadialClick = (e: MouseEvent<HTMLDivElement>): void => {
+    e.stopPropagation();
+  };
+
   return (
     <nav className={`${styles.menu} ${active ? styles.menu_active : ''}`}>
-      <div className={styles.background} />
+      {active && (
+        <Background>
+          <div className={styles.radial} onClick={handleRadialClick} />
+        </Background>
+      )}
       <BurgerButton />
       <ul className={styles.list}>
         <li className={styles.item}>
