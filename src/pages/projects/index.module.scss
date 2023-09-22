@@ -2,12 +2,23 @@
 
 .section {
   background-color: $light;
-  padding: 70px 115px;
+  padding: 70px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
 
+  @media screen and (max-width: 720px) {
+    padding: {
+      top: 30px;
+      bottom: 30px;
+    }
+  }
+
   .title {
     margin-bottom: 60px;
+
+    @media screen and (max-width: 720px) {
+      margin-bottom: 30px;
+    }
   }
 }
