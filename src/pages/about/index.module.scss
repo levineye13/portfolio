@@ -28,15 +28,15 @@
     }
 
     @media screen and (max-width: 1024px) {
-      font-size: 45px;
+      @include font(45px, 700, 58px);
     }
 
     @media screen and (max-width: 720px) {
-      font-size: 35px;
+      @include font(35px, 700, 48px);
     }
 
     @media screen and (max-width: 480px) {
-      font-size: 28px;
+      @include font(28px, 700, 40px);
     }
   }
 
@@ -45,15 +45,15 @@
     @include font(40px, 700, 56px);
 
     @media screen and (max-width: 1024px) {
-      font-size: 30px;
+      @include font(30px, 700, 40px);
     }
 
     @media screen and (max-width: 720px) {
-      font-size: 24px;
+      @include font(24px, 700, 30px);
     }
 
     @media screen and (max-width: 480px) {
-      font-size: 18px;
+      @include font(18px, 700, 25px);
     }
   }
 

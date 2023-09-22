@@ -7,4 +7,16 @@
   @extend %m-reset;
   font-family: 'DM Sans', 'Times New Roman', Times, serif;
   color: $blue;
+
+  @media screen and (max-width: 1024px) {
+    @include font(45px, 700, 58px);
+  }
+
+  @media screen and (max-width: 720px) {
+    @include font(35px, 700, 48px);
+  }
+
+  @media screen and (max-width: 480px) {
+    @include font(28px, 700, 35px);
+  }
 }
