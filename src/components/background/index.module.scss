@@ -1,0 +1,11 @@
+@import '../../styles/colors';
+
+.div {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba($color: $black, $alpha: 0.3);
+  cursor: pointer;
+}
