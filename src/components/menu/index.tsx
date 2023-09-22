@@ -3,9 +3,10 @@ import { NavLink } from 'react-router-dom';
 
 import styles from './index.module.scss';
 import { APP_ROUTES } from '../../core/constants';
-import { useAppSelector } from '../../core/store/hooks';
+import { useAppDispatch, useAppSelector } from '../../core/store/hooks';
 import Background from '../../components/background';
 import BurgerButton from '../burger-button';
+import { close } from '../../core/store/menuSlice';
 
 const { projects, skills, contacts } = APP_ROUTES;
 
@@ -17,9 +18,14 @@ const checkActiveLink = (
 
 const Menu: FC = (): ReactElement => {
   const { active } = useAppSelector((state) => state.menu);
+  const dispatch = useAppDispatch();
 
   const handleRadialClick = (e: MouseEvent<HTMLDivElement>): void => {
     e.stopPropagation();
+  };
+
+  const handleLinkClick = (): void => {
+    dispatch(close());
   };
 
   return (
@@ -34,6 +40,7 @@ const Menu: FC = (): ReactElement => {
         <li className={styles.item}>
           <NavLink
             to={projects}
+            onClick={handleLinkClick}
             className={({ isActive }) =>
               checkActiveLink(isActive, styles.link, styles.link_active)
             }
@@ -44,6 +51,7 @@ const Menu: FC = (): ReactElement => {
         <li className={styles.item}>
           <NavLink
             to={skills}
+            onClick={handleLinkClick}
             className={({ isActive }) =>
               checkActiveLink(isActive, styles.link, styles.link_active)
             }
@@ -54,6 +62,7 @@ const Menu: FC = (): ReactElement => {
         <li className={styles.item}>
           <NavLink
             to={contacts}
+            onClick={handleLinkClick}
             className={({ isActive }) =>
               checkActiveLink(isActive, styles.link, styles.link_active)
             }
