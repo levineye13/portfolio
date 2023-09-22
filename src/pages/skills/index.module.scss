@@ -6,12 +6,29 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 70px;
+  padding: 70px 20px;
+
+  @media screen and (max-width: 720px) {
+    padding: {
+      top: 30px;
+      bottom: 30px;
+    }
+  }
 
   .subtitle {
     @include font(40px, 700, 52px);
     font-family: 'DM Sans', 'Times New Roman', Times, serif;
     margin: 40px 0 0;
+
+    @media screen and (max-width: 720px) {
+      @include font(30px, 700, 42px);
+      margin-top: 30px;
+    }
+
+    @media screen and (max-width: 480px) {
+      @include font(24px, 700, 35px);
+      margin-top: 20px;
+    }
   }
 
   .list {
