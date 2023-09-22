@@ -11,15 +11,15 @@ const Skills: FC = (): ReactElement => {
       <Title>Skills</Title>
       <p className={styles.subtitle}>Frontend</p>
       <ul className={styles.list}>
-        {skills.frontend.map((skill) => (
-          <Skill {...skill} />
+        {skills.frontend.map((skill, index) => (
+          <Skill {...skill} key={index} />
         ))}
         <li className={styles.item}></li>
       </ul>
       <p className={styles.subtitle}>Backend</p>
       <ul className={styles.list}>
-        {skills.backend.map((skill) => (
-          <Skill {...skill} />
+        {skills.backend.map((skill, index) => (
+          <Skill {...skill} key={index} />
         ))}
       </ul>
     </section>
