@@ -1,0 +1,50 @@
+@import '../../styles/mixins';
+@import '../../styles/colors';
+@import '../../styles/reset';
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+
+  .event {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    //align-items: stretch;
+
+    .date {
+      @include font(20px, 500, 24px);
+      color: $light;
+    }
+
+    .line {
+      margin: 0 40px;
+      width: 5px;
+      background-color: $blue;
+      align-self: stretch;
+      position: relative;
+
+      .circle {
+        box-sizing: border-box;
+        width: 24px;
+        height: 24px;
+        border: 2px solid $blue;
+        background-color: $light;
+        border-radius: 50%;
+        position: absolute;
+        top: calc(50% - 12px);
+        left: calc(50% - 12px);
+      }
+    }
+
+    .description {
+      @extend %m-reset;
+      @include font(24px, 500, 24px);
+      box-sizing: border-box;
+      color: $light;
+      padding: 20px;
+      border: 1px solid $light;
+      border-radius: 5px;
+    }
+  }
+}
