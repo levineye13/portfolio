@@ -8,7 +8,7 @@ import Background from '../../components/background';
 import BurgerButton from '../burger-button';
 import { close } from '../../core/store/menuSlice';
 
-const { projects, skills, contacts } = APP_ROUTES;
+const { projects, timeline, skills, contacts } = APP_ROUTES;
 
 const checkActiveLink = (
   isActive: boolean,
@@ -46,6 +46,17 @@ const Menu: FC = (): ReactElement => {
             }
           >
             Projects
+          </NavLink>
+        </li>
+        <li className={styles.item}>
+          <NavLink
+            to={timeline}
+            onClick={handleLinkClick}
+            className={({ isActive }) =>
+              checkActiveLink(isActive, styles.link, styles.link_active)
+            }
+          >
+            Timeline
           </NavLink>
         </li>
         <li className={styles.item}>
