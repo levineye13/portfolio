@@ -10,7 +10,7 @@ const About: FC = (): ReactElement => {
         Hi, my name is <span className={styles.name}>Oleg</span>
       </h1>
       <p className={styles.subtitle}>
-        a frontend <Printer>developer</Printer>
+        a frontend <Printer ms={500}>developer</Printer>
       </p>
       <p className={styles.description}>
         with passion for learning and creating.

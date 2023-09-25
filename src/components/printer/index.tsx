@@ -4,34 +4,35 @@ import styles from './index.module.scss';
 
 interface IPrinter {
   readonly children: string;
+  readonly ms: number;
 }
 
-const Printer: FC<IPrinter> = ({ children }): ReactElement => {
+const Printer: FC<IPrinter> = ({ children, ms }): ReactElement => {
   const [printText, setPrintText] = useState<string>('');
   const [index, setIndex] = useState<number>(0);
   const intervalRef = useRef<NodeJS.Timeout>();
 
-  const add = (): void => {
-    setPrintText((currentText) => currentText + children[index]);
-    setIndex((currentIndex) => currentIndex + 1);
-  };
-
-  const drop = (): void => {
-    setPrintText(() => '');
-    setIndex(() => 0);
-  };
-
   useEffect(() => {
+    const add = (): void => {
+      setPrintText((currentText) => currentText + children[index]);
+      setIndex((currentIndex) => currentIndex + 1);
+    };
+
+    const drop = (): void => {
+      setPrintText(() => '');
+      setIndex(() => 0);
+    };
+
     intervalRef.current = setInterval(() => {
       if (children.length === index) {
         drop();
       } else {
         add();
       }
-    }, 800);
+    }, ms);
 
     return () => clearInterval(intervalRef.current);
-  }, [children, index, printText]);
+  }, [children, ms, index, printText]);
 
   return <span className={styles.text}>{printText}</span>;
 };
