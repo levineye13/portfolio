@@ -1,6 +1,7 @@
 @import '../../styles/mixins';
 @import '../../styles/colors';
 @import '../../styles/reset';
+@import '../../styles/animations';
 
 .timeline {
   @extend %list-reset;
@@ -27,6 +28,19 @@
     position: relative;
     display: flex;
     flex-direction: row;
+    align-items: center;
+    pointer-events: none;
+
+    &:hover {
+      &::before {
+        background-color: $peach;
+      }
+
+      & > div::before,
+      & > div::after {
+        animation: border-animation $animation-duration linear 0s 1 forwards;
+      }
+    }
 
     &::before {
       content: '';
@@ -38,6 +52,8 @@
       border-radius: 50%;
       position: absolute;
       top: 50%;
+      pointer-events: all;
+      transition: background-color 0.3s ease;
     }
 
     &:not(:first-of-type) {

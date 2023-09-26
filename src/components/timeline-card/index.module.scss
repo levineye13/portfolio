@@ -1,13 +1,53 @@
 @import '../../styles/mixins';
 @import '../../styles/colors';
 @import '../../styles/reset';
+@import '../../styles/animations';
 
 .card {
   box-sizing: border-box;
   font-family: 'DM Sans', 'Times New Roman', Times, serif;
-  border: 1px solid $black;
+  border: $border-width solid $blue;
   border-radius: 5px;
   padding: 30px 20px;
+  pointer-events: all;
+  position: relative;
+  background-color: $light;
+  z-index: 1;
+
+  &::before,
+  &::after {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    width: 0;
+    height: 0;
+    background-color: transparent;
+    border: 0 solid $peach;
+    border-radius: 5px;
+    z-index: -1;
+  }
+
+  &::before {
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    left: -$border-width;
+    top: -$border-width;
+  }
+
+  &::after {
+    border-top-color: transparent;
+    border-right-color: transparent;
+    bottom: -$border-width;
+    right: -$border-width;
+  }
+
+  &:hover::before {
+    animation: border-animation $animation-duration linear 0s 1 forwards;
+  }
+
+  &:hover::after {
+    animation: border-animation $animation-duration linear 0s 1 forwards;
+  }
 
   .year {
     @include font(24px, 500, 24px);
