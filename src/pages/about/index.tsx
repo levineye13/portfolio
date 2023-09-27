@@ -1,6 +1,7 @@
 import React, { FC, ReactElement } from 'react';
 
 import Printer from '../../components/printer';
+import ButtonScroll from '../../components/button-scroll';
 import styles from './index.module.scss';
 
 const About: FC = (): ReactElement => {
@@ -20,6 +21,7 @@ const About: FC = (): ReactElement => {
       <div className={styles.square} />
       <div className={styles.square} />
       <div className={styles.square} />
+      <ButtonScroll>To projects</ButtonScroll>
     </section>
   );
 };
