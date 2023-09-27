@@ -6,9 +6,10 @@ import { close } from '../../core/store/menuSlice';
 
 interface IBackground {
   readonly children?: ReactElement;
+  readonly isActive?: boolean;
 }
 
-const Background: FC<IBackground> = ({ children }): ReactElement => {
+const Background: FC<IBackground> = ({ children, isActive }): ReactElement => {
   const dispatch = useAppDispatch();
 
   const handleBackgroundClick = (e: MouseEvent<HTMLDivElement>): void => {
@@ -16,7 +17,10 @@ const Background: FC<IBackground> = ({ children }): ReactElement => {
   };
 
   return (
-    <div className={styles.div} onClick={handleBackgroundClick}>
+    <div
+      className={`${styles.div} ${isActive ? styles.active : ''}`}
+      onClick={handleBackgroundClick}
+    >
       {children}
     </div>
   );

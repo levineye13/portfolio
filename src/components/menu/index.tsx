@@ -30,11 +30,9 @@ const Menu: FC = (): ReactElement => {
 
   return (
     <nav className={`${styles.menu} ${active ? styles.menu_active : ''}`}>
-      {active && (
-        <Background>
-          <div className={styles.radial} onClick={handleRadialClick} />
-        </Background>
-      )}
+      <Background isActive={active}>
+        <div className={styles.radial} onClick={handleRadialClick} />
+      </Background>
       <BurgerButton />
       <ul className={styles.list}>
         <li className={styles.item}>
