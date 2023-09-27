@@ -12,7 +12,7 @@ export const timeline: event[] = [
   },
   {
     year: 2021,
-    description: 'Completed the Yandex.Practicum course on web development',
+    description: 'Completed the Yandex Practicum course on web development',
     duration: '10 months',
   },
   {
@@ -23,12 +23,12 @@ export const timeline: event[] = [
   {
     year: 2022,
     description:
-      'Completed the Yandex.Practicum course on algorithms and data structures',
+      'Completed the Yandex Practicum course on algorithms and data structures',
     duration: '4 months',
   },
   {
     year: 2022,
-    description: 'Completed the Yandex.Practicum course on react development',
+    description: 'Completed the Yandex Practicum course on react development',
     duration: '3 months',
   },
   {

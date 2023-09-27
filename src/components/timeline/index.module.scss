@@ -21,6 +21,11 @@
     left: calc(50% - 4px);
     top: 0;
     background-color: $blue;
+
+    @media screen and (max-width: 720px) {
+      width: 6px;
+      left: calc(50% - 3px);
+    }
   }
 
   .item {
@@ -54,6 +59,11 @@
       top: 50%;
       pointer-events: all;
       transition: background-color 0.3s ease;
+
+      @media screen and (max-width: 720px) {
+        width: 26px;
+        height: 26px;
+      }
     }
 
     &:not(:first-of-type) {
@@ -67,6 +77,10 @@
       &::before {
         right: 0;
         transform: translate(15px + 4px, -50%);
+
+        @media screen and (max-width: 720px) {
+          transform: translate(13px + 4px, -50%);
+        }
       }
     }
 
@@ -77,6 +91,10 @@
       &::before {
         left: 0;
         transform: translate(-15px - 4px, -50%);
+
+        @media screen and (max-width: 720px) {
+          transform: translate(-13px - 4px, -50%);
+        }
       }
     }
   }
