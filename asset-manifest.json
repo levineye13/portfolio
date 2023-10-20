@@ -1,12 +1,13 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.a386f481.css",
-    "main.js": "/portfolio/static/js/main.4f340edb.js",
+    "main.css": "/portfolio/static/css/main.575bf3f2.css",
+    "main.js": "/portfolio/static/js/main.6736f6c0.js",
     "static/media/russian-travel.png": "/portfolio/static/media/russian-travel.c0229693fbcd14ad2379.png",
     "static/media/project-company.png": "/portfolio/static/media/project-company.2a8aa5116f5dfdddfd9c.png",
     "static/media/react-burger.png": "/portfolio/static/media/react-burger.23365690557a5a46be52.png",
     "static/media/laslesvpn.png": "/portfolio/static/media/laslesvpn.7d840def5b7e575eb745.png",
     "static/media/movies-explorer.png": "/portfolio/static/media/movies-explorer.ed4b1f265668a1da7483.png",
+    "static/media/leasing-car.png": "/portfolio/static/media/leasing-car.4458138575586c8d403c.png",
     "static/media/DMSans-Regular.woff": "/portfolio/static/media/DMSans-Regular.c8cea20c75698a9e12b5.woff",
     "static/media/DMSans-Medium.woff": "/portfolio/static/media/DMSans-Medium.7230e30568b536ac2c57.woff",
     "static/media/DMSans-Bold.woff": "/portfolio/static/media/DMSans-Bold.31e81c03b14628499683.woff",
@@ -15,11 +16,11 @@
     "static/media/DMSans-Medium.woff2": "/portfolio/static/media/DMSans-Medium.5e55bf437636e34321fb.woff2",
     "static/media/sequelize.png": "/portfolio/static/media/sequelize.d98b2554b49e415e0c08.png",
     "index.html": "/portfolio/index.html",
-    "main.a386f481.css.map": "/portfolio/static/css/main.a386f481.css.map",
-    "main.4f340edb.js.map": "/portfolio/static/js/main.4f340edb.js.map"
+    "main.575bf3f2.css.map": "/portfolio/static/css/main.575bf3f2.css.map",
+    "main.6736f6c0.js.map": "/portfolio/static/js/main.6736f6c0.js.map"
   },
   "entrypoints": [
-    "static/css/main.a386f481.css",
-    "static/js/main.4f340edb.js"
+    "static/css/main.575bf3f2.css",
+    "static/js/main.6736f6c0.js"
   ]
 }
