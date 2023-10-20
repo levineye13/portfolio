@@ -6,7 +6,7 @@ import { APP_ROUTES } from '../../core/constants';
 import { useAppDispatch, useAppSelector } from '../../core/store/hooks';
 import Background from '../../components/background';
 import BurgerButton from '../burger-button';
-import SelectLanguage from '../select-language';
+// import SelectLanguage from '../select-language';
 import { close } from '../../core/store/menuSlice';
 
 const { projects, timeline, skills, contacts } = APP_ROUTES;
@@ -80,7 +80,7 @@ const Menu: FC = (): ReactElement => {
           </NavLink>
         </li>
       </ul>
-      <SelectLanguage />
+      {/* <SelectLanguage /> */}
     </nav>
   );
 };
