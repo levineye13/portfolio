@@ -4,6 +4,7 @@ import Movies from '../../images/gitRepos/movies-explorer.png';
 import Travel from '../../images/gitRepos/russian-travel.png';
 import Vpn from '../../images/gitRepos/laslesvpn.png';
 import Project from '../../images/gitRepos/project-company.png';
+import LeasingCar from '../../images/gitRepos/leasing-car.png';
 
 export const gitRepos = [
   { name: 'react-burger', img: Burger },
@@ -14,4 +15,5 @@ export const gitRepos = [
   { name: 'russian-travel', img: Travel },
   { name: 'movies-explorer-frontend', img: Movies },
   { name: 'movies-explorer-backend', img: Movies },
+  { name: 'leasing-car', img: LeasingCar },
 ];
