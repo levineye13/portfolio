@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.a233bdc9.css",
-    "main.js": "/portfolio/static/js/main.8846c082.js",
+    "main.css": "/portfolio/static/css/main.f078c2b6.css",
+    "main.js": "/portfolio/static/js/main.5af08ca7.js",
     "static/media/russian-travel.png": "/portfolio/static/media/russian-travel.c0229693fbcd14ad2379.png",
     "static/media/project-company.png": "/portfolio/static/media/project-company.2a8aa5116f5dfdddfd9c.png",
     "static/media/react-burger.png": "/portfolio/static/media/react-burger.23365690557a5a46be52.png",
@@ -16,11 +16,11 @@
     "static/media/DMSans-Medium.woff2": "/portfolio/static/media/DMSans-Medium.5e55bf437636e34321fb.woff2",
     "static/media/sequelize.png": "/portfolio/static/media/sequelize.d98b2554b49e415e0c08.png",
     "index.html": "/portfolio/index.html",
-    "main.a233bdc9.css.map": "/portfolio/static/css/main.a233bdc9.css.map",
-    "main.8846c082.js.map": "/portfolio/static/js/main.8846c082.js.map"
+    "main.f078c2b6.css.map": "/portfolio/static/css/main.f078c2b6.css.map",
+    "main.5af08ca7.js.map": "/portfolio/static/js/main.5af08ca7.js.map"
   },
   "entrypoints": [
-    "static/css/main.a233bdc9.css",
-    "static/js/main.8846c082.js"
+    "static/css/main.f078c2b6.css",
+    "static/js/main.5af08ca7.js"
   ]
 }
