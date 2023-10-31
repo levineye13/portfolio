@@ -16,6 +16,7 @@ export const skills: Skills = {
     { name: 'Webpack', img: images.webpack },
     { name: 'Figma', img: images.figma },
     { name: 'Jest', img: images.jest },
+    { name: 'Git', img: images.git },
   ],
   backend: [
     { name: 'NodeJs', img: images.node },

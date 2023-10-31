@@ -15,6 +15,7 @@ import restapi from './rest.png';
 import figma from './figma.png';
 import postman from './postman.png';
 import jest from './jest.png';
+import git from './git.png';
 
 export const images = {
   html,
@@ -34,4 +35,5 @@ export const images = {
   figma,
   postman,
   jest,
+  git,
 };
