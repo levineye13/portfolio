@@ -41,4 +41,10 @@ export const timeline: event[] = [
     description: "Earned a master's degree",
     duration: '2 years',
   },
+  {
+    year: 2023,
+    description:
+      'Completed the Yandex Practicum course on on the basics of working with git',
+    duration: '1 month',
+  },
 ];
