@@ -1,16 +1,20 @@
-import React, { ReactElement } from 'react';
+import React, { FC, ReactElement } from 'react';
 
 import Project from '../project';
 import styles from './index.module.scss';
 import { useAppSelector } from '../../core/store/hooks';
 import { gitRepos } from '../../core/data/repos';
 
-const Projects = (): ReactElement => {
-  const { projects } = useAppSelector((state) => state.project);
+interface IProjects {
+  type?: 'projects' | 'packages';
+}
+
+const Projects: FC<IProjects> = ({ type = 'projects' }): ReactElement => {
+  const data = useAppSelector((state) => state.project[type]);
 
   return (
     <ul className={styles.list}>
-      {projects.map((project) => {
+      {data.map((project) => {
         const rep = gitRepos.find((rep) => rep.name === project.name);
 
         return (
