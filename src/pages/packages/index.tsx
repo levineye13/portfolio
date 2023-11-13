@@ -11,8 +11,8 @@ const Projects: FC = (): ReactElement => {
 
   return (
     <section className={styles.section}>
-      <Title className={styles.title}>Projects</Title>
-      {loading ? <Loader /> : <ProjectList type='projects' />}
+      <Title className={styles.title}>Packages</Title>
+      {loading ? <Loader /> : <ProjectList type='packages' />}
     </section>
   );
 };

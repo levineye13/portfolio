@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 
 import About from '../about';
 import Projects from '../projects';
+import Packages from '../packages';
 import Timeline from '../timeline';
 import Skills from '../skills';
 import Contacts from '../contacts';
@@ -21,6 +22,7 @@ const Main = () => {
             <>
               <About />
               <Projects />
+              <Packages />
             </>
           }
         />

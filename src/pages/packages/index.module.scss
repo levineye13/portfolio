@@ -1,0 +1,24 @@
+@import '../../styles/colors';
+
+.section {
+  background-color: $light;
+  padding: 30px 20px 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (max-width: 720px) {
+    padding: {
+      top: 30px;
+      bottom: 30px;
+    }
+  }
+
+  .title {
+    margin-bottom: 60px;
+
+    @media screen and (max-width: 720px) {
+      margin-bottom: 30px;
+    }
+  }
+}
