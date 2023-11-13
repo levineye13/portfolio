@@ -1,16 +1,24 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 import { getRepos } from '../githubApi';
-import { gitRepos } from '../data/repos';
+import { gitRepos, TRep } from '../data/repos';
+
+interface IRep {
+  id: number;
+  name: string;
+  html_url: string;
+}
 
 interface IProjectsState {
-  projects: Array<{ id: number; name: string; html_url: string }>;
+  projects: Array<IRep>;
+  packages: Array<IRep>;
   loading: boolean;
   error: string | null;
 }
 
 const initialState: IProjectsState = {
   projects: [],
+  packages: [],
   loading: false,
   error: null,
 };
@@ -20,7 +28,37 @@ export const getProjects = createAsyncThunk(
   async (_, thunkAPI) => {
     try {
       const res = await getRepos(gitRepos.map((rep) => rep.name));
-      return res;
+
+      const data = res.reduce(
+        (
+          acc: Pick<IProjectsState, 'projects' | 'packages'>,
+          rep: IRep
+        ): Pick<IProjectsState, 'projects' | 'packages'> => {
+          const repos = gitRepos.find((item) => item.name === rep.name) as TRep;
+
+          if (repos.isPackage) {
+            acc.packages.push(rep);
+
+            return {
+              ...acc,
+              packages: acc.packages,
+            };
+          }
+
+          acc.projects.push(rep);
+
+          return {
+            ...acc,
+            projects: acc.projects,
+          };
+        },
+        {
+          projects: [],
+          packages: [],
+        }
+      );
+
+      return data;
     } catch (e) {
       return thunkAPI.rejectWithValue('Failed to fetch projects.');
     }
@@ -40,7 +78,8 @@ export const projectsSlice = createSlice({
       .addCase(getProjects.fulfilled, (state, action) => {
         state.loading = false;
         state.error = null;
-        state.projects = action.payload;
+        state.projects = action.payload.projects;
+        state.packages = action.payload.packages;
       })
       .addCase(getProjects.rejected, (state, action) => {
         state.loading = false;
