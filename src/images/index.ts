@@ -6,6 +6,7 @@ import redux from './skills/redux.png';
 import react from './skills/react.png';
 import ts from './skills/typescript.png';
 import webpack from './skills/webpack.png';
+import rollup from './skills/rollup.png';
 import node from './skills/nodejs.png';
 import express from './skills/express.png';
 import mongoose from './skills/mongoose.png';
@@ -26,6 +27,7 @@ export const images = {
   react,
   redux,
   webpack,
+  rollup,
   node,
   express,
   mongoose,

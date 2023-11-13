@@ -14,6 +14,7 @@ export const skills: Skills = {
     { name: 'React', img: images.react },
     { name: 'Redux', img: images.redux },
     { name: 'Webpack', img: images.webpack },
+    { name: 'Rollup', img: images.rollup },
     { name: 'Figma', img: images.figma },
     { name: 'Jest', img: images.jest },
     { name: 'Git', img: images.git },
